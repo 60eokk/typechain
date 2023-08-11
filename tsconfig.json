@@ -1,0 +1,22 @@
+
+
+//typescript is a COMPILER
+// in this file, it is going to see which file the program will look at
+
+
+{
+    "include": ["src"],
+    "compilerOptions": {
+        "outDir": "build",      // outDirectory key is where the js is going to go
+                                // After this, write the "build" line in package.json and npm build run it, 
+                                //then it will create the build file
+        "target": "ES6",        // means what version you want the js file shuold convert to 
+        "lib": ["ES6"],         // dom will let ts suggest me to use which and not to use which function
+                                // gives a lot of auto completes to help us write code (btw, got rid of dom because we will work in
+                                // nodeJS environment for the actual blockchain program)
+        "strict": true,         // this will make ts very PROTECTIVE, save you from mistakes
+        // "allowJs": true,         
+        "esModuleInterop": true,
+        "module": "CommonJS"
+    }
+}
